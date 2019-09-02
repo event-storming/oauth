@@ -28,11 +28,10 @@ public class AuthorizationServerApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 //		User user = new User();
-//		user.setId(3l);
 //		user.setUsername("4@4.com");
 //		user.setPassword(passwordEncoder.encode("password"));
 //		user.setRole("USER_ADMIN");
-//
+////
 //		repository.save(user);
 
 	}
