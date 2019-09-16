@@ -165,7 +165,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 
             if(authentication.isAuthenticated()) {
                 Map<String, Object> additionalInfo = new HashMap<>();
-                additionalInfo.put("company", "CLT");
+                additionalInfo.put("company", "Uengine");
 //                String clientId = authentication.getOAuth2Request().getClientId();
 //                logger.debug("client ID : " + clientId);
 
