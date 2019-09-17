@@ -15,9 +15,17 @@ spring:
     # mybatis 설정시에는 driverClassName 을 넣어주어야함
     driverClassName: com.mysql.cj.jdbc.Driver
 
+---
+spring:
+  profiles: default
 # --- server
 server:
   port: 8090
 
+---
+spring:
+  profiles: docker
 
+server:
+  port: 8080
 
