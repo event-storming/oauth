@@ -80,7 +80,8 @@ steps:
                   ports:
                     - containerPort: 8080
         EOF
-
+substitutions:
+    _PROJECT_NAME: oauth
 options:
   env:
     #    # location/name of GKE cluster (used by all kubectl commands)
