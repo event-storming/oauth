@@ -33,7 +33,6 @@ public class AuthorizationServerApplication implements CommandLineRunner {
 		user.setNickName("유엔진");
 		user.setAddress("서울시");
 		user.setRole("USER_ADMIN");
-//
 		repository.save(user);
 
 	}

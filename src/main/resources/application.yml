@@ -8,12 +8,12 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL57Dialect
         show_sql: true
-  datasource:
-    url: jdbc:mysql://104.198.86.212:3306/uengine
-    username: root
-    password: test1234!@
-    # mybatis 설정시에는 driverClassName 을 넣어주어야함
-    driverClassName: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    url: jdbc:mysql://104.198.86.212:3306/uengine
+#    username: root
+#    password: test1234!@
+#    # mybatis 설정시에는 driverClassName 을 넣어주어야함
+#    driverClassName: com.mysql.cj.jdbc.Driver
 
 ---
 spring:
