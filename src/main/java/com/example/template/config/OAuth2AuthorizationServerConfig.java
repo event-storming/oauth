@@ -166,10 +166,12 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
             if(authentication.isAuthenticated()) {
                 Map<String, Object> additionalInfo = new HashMap<>();
                 additionalInfo.put("company", "Uengine");
+				if( !CLIENT_CREDENTIALS.equals(authentication.getOAuth2Request().getGrantType()) ){
+					User user = (User)authentication.getPrincipal();
+					additionalInfo.put("nickname", user.getNickName());
+					additionalInfo.put("address", user.getAddress());
+				}
 
-				User user = (User)authentication.getPrincipal();
-				additionalInfo.put("nickname", user.getNickName());
-				additionalInfo.put("address", user.getAddress());
 //                String clientId = authentication.getOAuth2Request().getClientId();
 //                logger.debug("client ID : " + clientId);
 

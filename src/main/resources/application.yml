@@ -22,6 +22,9 @@ spring:
 server:
   port: 8090
 
+#logging:
+#  level:
+#    org.springframework: debug
 ---
 spring:
   profiles: docker
