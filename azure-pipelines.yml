@@ -36,7 +36,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
-    - task: Cache@2
+    - task: CacheBeta@1
       inputs:
         key: 'maven | "$(Agent.OS)" | **/pom.xml'
         restoreKeys: |
@@ -52,19 +52,6 @@ stages:
         jdkVersionOption: '1.8'
         jdkArchitectureOption: 'x64'
         goals: 'package'
-    - task: CopyFiles@2
-      inputs:
-        SourceFolder: '$(system.defaultworkingdirectory)'
-        Contents: |
-          **/*.jar
-          Dockerfile
-          kubernetes/*
-        TargetFolder: '$(build.artifactstagingdirectory)'
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-        ArtifactName: 'artifact'
-        publishLocation: 'Container'
     - task: Docker@2
       inputs:
         containerRegistry: $(containerRegistryDockerConnection)
