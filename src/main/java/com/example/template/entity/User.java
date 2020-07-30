@@ -12,7 +12,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "users")
+@Table(name = "users_table")
 public class User implements UserDetails{
 
 	@Id

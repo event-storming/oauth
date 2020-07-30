@@ -59,21 +59,6 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
 	@Autowired
 	private Environment env;
 
-	/**
-	 * DB 설정을 별도로 하게 되면 에러가 발생한다.
-	 * @throws Exception
-	 */
-//	@Bean
-//	public DataSource oauthDataSource() {
-//
-//		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-//		dataSource.setDriverClassName(env.getProperty("spring.datasource.driverClassName"));
-//		dataSource.setUrl(env.getProperty("spring.datasource.url"));
-//		dataSource.setUsername(env.getProperty("spring.datasource.username"));
-//		dataSource.setPassword(env.getProperty("spring.datasource.password"));
-//		return dataSource;
-//	}
-
 	@Override
 	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
 		security.accessDeniedHandler((request, response, exception)->{
